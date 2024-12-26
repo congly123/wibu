@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Link Redirect</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            const appPackage = "wibu.ai"; // Thay đổi với tên gói của bạn
+            const playStoreUrl = "https://play.google.com/store/apps/details?id=com.vnid";
+
+            // Cố gắng mở ứng dụng nếu đã cài đặt
+            const intentUrl = "https://play.google.com/store/apps/details?id=com.vnid"
+            const startTime = Date.now();
+
+            // Cố gắng mở ứng dụng
+            window.location.href = intentUrl;
+
+            // Nếu không mở được, chuyển hướng đến Play Store sau 1 giây
+            setTimeout(function() {
+                if (Date.now() - startTime < 2000) { // Nếu không mở được ứng dụng, chuyển hướng đến Play Store
+                    window.location.href = playStoreUrl;
+                }
+            }, 1000); // Thời gian chờ 1 giây để kiểm tra
+        };
+    </script>
+</head>
+<body>
+    <h1>Chuyển hướng đến ứng dụng...</h1>
+</body>
+</html>
