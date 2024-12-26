@@ -1,1 +1,5 @@
-
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "wibu.ai",
+               "sha256_cert_fingerprints": ["25:27:76:EF:D8:1F:0D:07:11:90:32:88:43:B6:47:2F:ED:08:65:2A:AA:8D:FE:97:B7:83:09:C4:5D:29:52:2B"] }
+}]
